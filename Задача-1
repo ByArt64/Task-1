@@ -1,0 +1,69 @@
+#include <iostream>
+
+int main() {
+
+	//Переменные с названиями сановок
+	std::string busStopOne	 = "Улица Тульская";					
+	std::string busStopTwo	 = "Улица Химическая";
+	std::string busStopThree = "Улица Лесная";
+	std::string busStopFour	 = "Улица Фуктовая";
+
+	int numberPassengerEntered		= 0;	//Переменная кол-ва вошедших пассажиров
+	int totalPassegerEntered		= 0;	//Переменная общего кол-ва вошедших пассажиров необходима для итогового расчета
+	int numberPassengerDisembarked;			//Переменная кол-ва вышедших пассажиров
+	int totalCountPassenger			= 0;	//Переменная суммарного кол-ва пассажиров аходящихся в маршрутке
+	int ticketPrice				= 20;	//Переменная соимсти проезда
+	
+	std::cout << "Прибываем на остановку " << busStopOne << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "Сколько пассажиров вышло на остановке? ";
+	std::cin >> numberPassengerDisembarked;
+	std::cout << "Сколько пассажиров зашло на остановке? ";
+	std::cin >> numberPassengerEntered;
+	totalCountPassenger = numberPassengerEntered - numberPassengerDisembarked;
+	totalPassegerEntered += numberPassengerEntered;
+	std::cout << "Отправляемся с остановки " << busStopOne << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "-----------Едем---------\n";
+
+	std::cout << "Прибываем на остановку " << busStopTwo << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "Сколько пассажиров вышло на остановке? ";
+	std::cin >> numberPassengerDisembarked;
+	std::cout << "Сколько пассажиров зашло на остановке? ";
+	std::cin >> numberPassengerEntered;
+	totalCountPassenger = numberPassengerEntered - numberPassengerDisembarked;
+	totalPassegerEntered += numberPassengerEntered;
+	std::cout << "Отправляемся с остановки " << busStopTwo << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "-----------Едем---------\n";
+
+	std::cout << "Прибываем на остановку " << busStopThree << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "Сколько пассажиров вышло на остановке? ";
+	std::cin >> numberPassengerDisembarked;
+	std::cout << "Сколько пассажиров зашло на остановке? ";
+	std::cin >> numberPassengerEntered;
+	totalCountPassenger = numberPassengerEntered - numberPassengerDisembarked;
+	totalPassegerEntered += numberPassengerEntered;
+	std::cout << "Отправляемся с остановки " << busStopThree << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "-----------Едем---------\n";
+
+	std::cout << "Прибываем на остановку " << busStopFour << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	std::cout << "Сколько пассажиров вышло на остановке? ";
+	std::cin >> numberPassengerDisembarked;
+	std::cout << "Сколько пассажиров зашло на остановке? ";
+	std::cin >> numberPassengerEntered;
+	totalCountPassenger = numberPassengerEntered - numberPassengerDisembarked;
+	totalPassegerEntered += numberPassengerEntered;
+	std::cout << "Отправляемся с остановки " << busStopFour << ". В салоне пассажиров: " << totalCountPassenger << "\n";
+	
+	int totalAmount		= ticketPrice * totalPassegerEntered;
+	int salaryDriver	= totalAmount / 4;
+	int coastFuel		= totalAmount / 5;
+	int priceTax		= totalAmount / 5;
+	int repairCar		= totalAmount / 5;
+	int netGain			= totalAmount - salaryDriver - coastFuel - priceTax - repairCar;
+
+	std::cout << "Всего заработали: " << totalAmount << "руб.\n";
+	std::cout << "Зарплата водителя " << salaryDriver << "руб.\n";
+	std::cout << "Расходы на топливо: " << coastFuel << "руб.\n";
+	std::cout << "Налоги: " << priceTax << "руб.\n";
+	std::cout << "Расходы на ремонт машины: " << repairCar << "руб.\n";
+	std::cout << "Итого доход: " << netGain << "руб.\n";
+}
