@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+	int a = 42;
+	int b = 153;
+
+	std::cout << "a: " << a << "\n";
+	std::cout << "b: " << b << "\n";
+
+	a = a + b;
+	b = a - b;
+	a = a - b;
+
+	std::cout << "a: " << a << "\n";
+	std::cout << "b: " << b << "\n";
+}
