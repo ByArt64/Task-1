@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+	std::cout << "Бамбук vs Ведиели!\n";
+
+	int startHeight;
+	std::cout << "Введите высоту сажаца бабука в см: ";
+	std::cin >> startHeight;
+
+	int growth;
+	std::cout << "Введите на сколько вырастает саженец бабука за день в см: ";
+	std::cin >> growth;
+
+	int losses;
+	std::cout << "Введите на сколько cъедаю саженец бабукаведиели за ночь в см: ";
+	std::cin >> losses;
+
+	int thirdDayGrowth = growth * 2 + growth / 2;
+	int thirddayLosses = losses * 2;
+	int thirdDayHeight = startHeight + thirdDayGrowth - thirddayLosses;
+
+	std::cout << "Высота быбука к середине 3-го дня: " << thirdDayHeight << ".\n";
+}
